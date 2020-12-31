@@ -17,9 +17,13 @@ display: table; margin-left: auto; margin-right: auto; 을 써야한다.
 class 는 그룹으로 묶어주는것. (변수?) 여러 개의 선택자를 통해서 하나의 태그를 공동으로 제어 가능
 프롭스값 도 style 에 . 을써서 프롭스 지정 가능하다.
 id 값을 지정, #값 을 지정하면 가장 우선순위로 실행된다 ex)<id="abc"> # abc{
-
 }
-테그>class>ID 순서로 실행-->
+테그>class>ID 순서로 실행
+12-31 CSS8강
+solid 직선 형태 , 선택자를 여러개 지정하고 프롭스값 설정이 가능하다.
+테두리 밑에만 줄을 긋고싶다면 border-buttom: 1px solid : gray;
+
+-->
 
 <html>
 <!doctype html>
@@ -27,48 +31,63 @@ id 값을 지정, #값 을 지정하면 가장 우선순위로 실행된다 ex)<
   <title>web1 - CSS </title>
   <meta charset = "utf-8">
   <style>
-    #active{
-      color:gray;
+    #grid{
+      display: grid;
+      grid-template-columns: 300px 1fr;
     }
-
     h1 {
-      font-size:50px;
-      text-align:center;
+      font-size:70px;
+      text-align: center;
+      border-bottom:3px solid gray;
+      margin:0;
     }
     ol  {
       font-size:40px;
-      display: table; margin-left: auto; margin-right: auto;
+      color:black;
+      margin:0;
+      border-right:3px solid gray;
+      width:200;
+
+    }
+    a{
+      text-decoration:none;
       color:black;
     }
     .saw{
+      color:gray;
+      text-decoration:none;
+    }
+    .red{
       color:red;
       text-decoration:none;
     }
-    a {
-      font-size:40PX;
-      text-decoration: none;
-      color:black;
-    }
 
-    </style></head>
+
+    </style>
+  </head>
 <body>
-  <h1><a href ="index.html"target="_blank">WEB</a></h1>
-<ol>
-  <li><a href ="1.html"target="_blank"class="saw" id="active">HTML</a></li>
-  <li><a href ="2.html"target="_blank"class="saw">CSS</a></li>
-  <li><a href ="3.html"target="_blank"class="saw" id="active">JavaScript</a></li>
-</ol>
-<!--<h1><a href ="index.html"target="_blank"><font color="red">WEB</font></a></h1>
-<ol>
-<li><a href ="1.html"target="_blank"><font color="red">HTML</font></a></li>
-<li><a href ="2.html"target="_blank"><font color="red">CSS</font></a></li>
-<li><a href ="3.html"target="_blank"><font color="red">JavaScript</font></a></li>
-</ol> -->
-<h2> CSS 페이지 입니다.</h2>
-<p><a href = "https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/CSS_%EA%B8%B0%EB%B3%B8" target="_blank" title = "자바스크립트 기초 바로가기.">CSS 기초 바로가기</a></p>
-<strong>CSS기초  <u>위에 링크 클릭 </u> 바로가기 </strong> <br>
-<p></p>
-<p></p>
-<img src="org.jpg" width="50%">
-</body>
+  <h1><a href ="index.html"target="_blank"id="main">WEB</a></h1>
+<div id="grid">
+  <ol>
+    <li><a href ="1.html"target="_blank"class="saw" id="active">HTML</a></li>
+    <li><a href ="2.html"class="red">CSS</a></li>
+    <li><a href ="3.html"target="_blank"class="saw" id="active">JavaScript</a></li>
+  </ol>
+  <!--<h1><a href ="index.html"target="_blank"><font color="red">WEB</font></a></h1>
+  <ol>
+  <li><a href ="1.html"target="_blank"><font color="red">HTML</font></a></li>
+  <li><a href ="2.html"target="_blank"><font color="red">CSS</font></a></li>
+  <li><a href ="3.html"target="_blank"><font color="red">JavaScript</font></a></li>
+  </ol> -->
+    <div>
+      <h2> CSS 페이지 입니다.</h2>
+        <p><a href = "https://developer.mozilla.org/ko/docs/Learn/Getting_started_with_the_web/CSS_%EA%B8%B0%EB%B3%B8" target="_blank" title = "자바스크립트 기초 바로가기.">CSS 기초 바로가기</a></p>
+        <strong>CSS기초  <u>위에 링크 클릭 </u> 바로가기 </strong> <br>
+        <p></p>
+
+        <p></p>
+      <img src="org.jpg" width="50%">
+      </div>
+    </div>
+  </body>
 </html>
