@@ -3,51 +3,68 @@
 <!-- 12강 li = 목차 ul = li테그 묶음 ol = li 테그의 숫자를 자동으로 넘버링 해줌 --!>
 <!-- 13강 title = 제목을 설정 --!>
   <!-- 14강 a 테그 = 링크를 걸어줄때 사용 양식은  a href = "페이지 주소"
-  target="_blank"= 새탭으로 열기 title = 툴팁 띄워주기 --!>
+  target="_blank"= 새탭으로 열기 title = 툴팁 띄워주기
+js
+css 의 테그를 어떤 이벤트로 바꾸고 싶다면
+document.querySelector('선택자') 로 사용하면 된다
+이미 정해져있는 배열에 추가를 원하면
+배열을 지정해 놓은 변수.push('값') 을 지정하면 추가가 된다 -->
 <!doctype html>
 <html>
 <head>
   <title>web1 - JS </title>
   <meta charset = "utf-8">
-  <style>
-    #main{
-      color:black;
-        text-decoration:none;
-    }
-    h1 {
-      text-align:center;
-      text-decoration:none;
-      font-size:70px;
-    }
-    ol  {
-      font-size:40px;
-      display: table; margin-left: auto; margin-right: auto;
-      color:black;
-    }
-    .saw{
-      color:red;
-      text-decoration:none;
-    }
-    ol a {
-      font-size:40PX;
-      text-decoration: none;
-      color:gray;
-    }
-
-    </style>
+  <link rel ="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1><a href ="index.html"target="_blank"id="main">WEB</a></h1>
+  <h1><a href ="index.html"id="main"title= "메인으로 이동 ">WEB</a></h1>
+  
+    <input type= "button" value ="night" onclick="
+    var taget= document.querySelector('body')
+    if(document.querySelector('body').dataset.mode=== 'day'){
+      taget.style.backgroundColor = 'black';
+      taget.style.color ='white';
+    document.querySelector('body').dataset.mode = 'night';
+    this.vlaue = 'day';
+    var list = document.querySelectorAll('a');
+    var i = 0;
+    while(i<list.length){
+      list[i].style.color = 'powderblue';
+      i= i+1; 
+       }
+    } 
+    else{
+      taget.style.backgroundColor = 'white';
+      taget.style.color ='black';
+    document.querySelector('body').dataset.mode = 'day';
+    this.vlaue ='night';
+    
+    var list = document.querySelectorAll('a');
+    var i = 0;
+    while(i<list.length){
+      list[i].style.color = 'black';
+      i= i+1; 
+    }
+  } 
+    ">
+    
+  
+  
+  <div id="grid">  
 <ol>
-  <li><a href ="1.html"target="_blank">HTML</a></li>
-  <li><a href ="2.html"target="_blank">CSS</a></li>
-  <li><a href ="3.html"target="_blank"class="saw">JavaScript</a></li>
+  <li><a href ="1.html"title="html 페이지로 이동합니다">HTML</a></li>
+  <li><a href ="2.html"title="CSS 페이지로 이동합니다.">CSS</a></li>
+  <li><a href ="3.html"title="현재페이지 입니다.">JavaScript</a></li>
 </ol>
+<div>
 <h2>JS 페이지 입니다.</h2>
 <p><a href = "https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/A_first_splash" target="_blank" title = "JS 기초 바로가기">JS 기초 바로가기</a></p>
 <strong>JS기초 <u>바로가기 </u>위에 링크 클릭</strong><br>
 <p></p>
 <p>.</p>
-<img src="org.jpg" width="50%">
+<img src="org.jpg" width="30%">
+</div>
+</div>
 </body>
 </html>
