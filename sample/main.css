@@ -1,0 +1,27 @@
+table {
+    border: 1px solid black;
+    width:700px;
+    height:250px;
+    text-align:center;
+  }
+th{
+    padding:15px;
+    border:1px solid black;
+    }
+td{
+    padding:15px;   
+    border:1px solid black;
+}
+.blind {
+    /* position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px; */
+    display: none;
+  }
+
+input[id="action"]:checked ~ .blind {
+    display: block;
+}

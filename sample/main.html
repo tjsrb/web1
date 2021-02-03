@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./main.css" />
+  <script src="/main.js"></script>
+  <title>회원가입</title>
+  <body>
+    <form action="http://www.naver.com">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">회원가입</th>
+            <th>설명</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>이름</td>
+            <td><input type="text" placeholder="입력하기" /></td>
+            <td>이름을 입력하세요</td>
+          </tr>
+          <tr>
+            <td>성별</td>
+            <td>
+              <input type="radio" name="gender" value="female"checked="checked"/>여자
+              <input type="radio" name="gender" value="male" />남자
+            </td>
+            <td>성별을 선택하세요</td>
+          </tr>
+
+          <tr>
+            <td>취미</td>
+            <td>
+              <input type="checkbox" />독서 <input type="checkbox" />영화감상
+              <input type="checkbox" />게임 <input type="checkbox" />축구
+              <input type="checkbox" id="action"/>기타
+              <input type="text" class="blind" id="blindInput">
+            </td>
+            <td>취미를 두개 이상 선택하세요</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"><input type="submit" value="완료" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+    <h3>주의사항</h3>
+    <ol>
+      <li>어쩌구 저쩌구</li>
+      <ul>
+        <li>블라블라블라</li>
+        <li>블라블라블라</li>
+      </ul>
+      <li>어쩌구 저쩌구</li>
+      <li>어쩌구 저쩌구</li>
+      <li>어쩌구 저쩌구</li>
+      <ul>
+        <li>블라블라블라</li>
+        <li>블라블라블라</li>
+      </ul>
+    </ol>
+    <!-- <script>
+        var $actionState = false;
+
+        var $action = document.getElementById("action");
+        var $blindInput = document.getElementById("blindInput");
+
+        $action.addEventListener("click", actionClickHandler);
+        
+        function actionClickHandler(){
+            $actionState = !$actionState;
+            if($actionState == true){ // 체크가 되어있는 상태
+                $blindInput.classList.remove("blind");
+                $blindInput.focus();
+                $blindInput.value = '';
+            }else{ // 체크가 안된 상태
+                $blindInput.classList.add("blind");
+            }
+        }
+    </script> -->
+  </body>
+</html>
